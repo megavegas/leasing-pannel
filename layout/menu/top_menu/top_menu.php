@@ -1,0 +1,174 @@
+<?php 
+	$logout_url = wp_logout_url(home_url());
+?>
+<header class="w-100 leas_navbar navbar sticky-top bg-light flex-md-nowrap p-2 shadow" data-bs-theme="dark">
+	<div class="leas_manu">
+		<a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+			<img src="https://www.hamtaloans.com/accounts/leasing/assets/img/menu.svg" width="30px" style="filter: invert(1);">
+		</a>
+	</div>
+	<div class="leas_user_name">
+		<div class="user_name">
+			<span>نام : </span><span><strong><?php echo get_user_meta(get_current_user_id(),'first_name' , true) . ' ' .get_user_meta(get_current_user_id(),'last_name' , true) ; ?></strong></span>
+		</div>
+	</div>
+	<div class="leas_logo d-flex justify-content-end"><a class="navbar-brand" href="<?php get_site_url();?>/my-account"><img src="<?php echo $image[0]; ?>" width="150px"></a></div>
+</header>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+		<div class="offcanvas-header">
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+		</div>
+		<div class="offcanvas-body">
+			
+			
+			
+	
+
+
+
+
+			<nav>
+				<ul class="master_navs">
+
+					<li class="nav-item">
+						<div class="nav_inner_div navid_with_icon">
+							<img src="https://hamtaloans.com/inc/libs/bootstrap-icons-1.1/person-plus.svg"  class="navid_wico_icon" style="width: 24px; height:24px;">
+							<a class="navid_link" href="<?php echo get_site_url();?>/my-account/?dashboard=general_sale">داشبورد فروش</a> 
+						</div>
+					</li>
+
+					<li class="nav-item">
+						<div class="nav_inner_div navid_with_icon">
+							<img src="https://hamtaloans.com/inc/libs/bootstrap-icons-1.1/search.svg"  class="navid_wico_icon" style="width: 24px; height:24px;">
+							<a class="navid_link" href="<?php echo get_site_url();?>/my-account/?leasing=search_order">جستجوی سفارش</a> 
+						</div>
+					</li>
+
+					<!-- فروش -->
+					<li class="nav-item dropdown">
+						
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="https://hamtaloans.com/inc/libs/bootstrap-icons-1.1/person-gear.svg" class="navid_wico_icon" style="width: 24px; height:24px;">
+							فروش
+						</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?compair=compair_sale">داشبورد فروش</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?sale=today_sale">فروش امروز</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?sale=last_day_sale">روز گذشته</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?sale=this_week_sale">هفته جاری</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?sale=last_week_sale">هفته گذشته</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?sale=this_month_sale">فروش ماه جاری</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?sale=last_month_sale">فروش ماه گذشته</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?sale=this_year_sale">فروش سال جاری</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?sale=last_year_sale">فروش سال گذشته</a></li>
+							
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?sale=branch_sale">فروش نماینده</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?sale=state_sale">فروش استان</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?sale=city_sale">فروش شهر</a></li>
+						</ul>
+					</li>
+
+					<!-- نماینده -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<img src="https://hamtaloans.com/inc/libs/bootstrap-icons-1.1/gem.svg"  class="navid_wico_icon" style="width: 24px; height:24px;">
+						نمایندگی
+						</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-item">
+								<a class="nav-link" href="<?php echo get_site_url();?>/my-account/?leasing=reprot_home">
+									<img src="https://hamtaloans.com/accounts/leasing/assets/img/agency.svg"  class="navid_wico_icon" style="width: 24px; height:24px;">
+									گزارش فروش کل نمایندگان
+								</a>
+							</li>
+							<li class="dropdown-item">
+								<a class="nav-link" href="<?php echo get_site_url();?>/my-account/?leasing=search_branch">
+									<img src="https://hamtaloans.com/accounts/leasing/assets/img/agency.svg"  class="navid_wico_icon" style="width: 24px; height:24px;">
+									نمایندگی ها
+								</a>
+							</li>
+							
+							
+							
+						</ul>
+					</li>
+					
+					<!-- ابزار -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="https://hamtaloans.com/inc/libs/bootstrap-icons-1.1/person-gear.svg" class="navid_wico_icon" style="width: 24px; height:24px;">
+							ابزار ها
+						</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?tools=bajet_balance">استعلام باجت</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?tools=quik_edit_sellers">محاسبه گر اقساط</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?tools=change_plan">تغییر طرح پیش فاکتور</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?tools=check_cash_payment_bill">استعلام پرداخت نقدی پیش فاکتور</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?tools=change_le_user">انتقال نماینده به کارشناس</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?tools=change_branch_state">تغییر استان نماینده</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?tools=change_branch_city">تغییر شهر نماینده</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?tools=change_branch_zone">تغییر منطقه نماینده</a></li>
+						</ul>
+					</li>
+
+					<!-- مشتری -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="https://hamtaloans.com/inc/libs/bootstrap-icons-1.1/person-gear.svg" class="navid_wico_icon" style="width: 24px; height:24px;">
+							مشتریان
+						</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?customers=cstomers">مشتریان من</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?customers=orders_of_customers">سفارشات مشتری</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?customers=zone_customers">مشتریان بر اساس منطقه</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?customers=branch_customers">مشتریان بر اساس نماینده</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?customers=state_customers">مشتریان بر اساس استان</a></li>
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?customers=city_customers">مشتریان بر اساس شهر</a></li>
+						</ul>
+					</li>
+
+					
+					<li class="nav-item">
+						<div class="nav_inner_div">
+							<a class="nav-link" href="<?php echo get_site_url();?>/my-account/?leasing=add_custom_invoice">ثبت سفارش برای مشتری</a> 
+						</div>
+					</li>
+					<li class="nav-item">
+						<div class="nav_inner_div">
+							<a class="nav-link"  href="<?php echo get_site_url();?>/my-account/?leasing=add_new_customer_to_branch">ثبت مشتری اقساطی</a>
+						</div>
+					</li>
+
+					<li class="nav-item">
+						<div class="nav_inner_div navid_with_icon">
+							<img src="https://hamtaloans.com/inc/libs/bootstrap-icons-1.1/person-vcard.svg" class="navid_wico_icon"  style="width: 24px; height:24px;">
+							<a class="navid_link" href="<?php echo get_site_url();?>/my-account/?leasing=edit_my_account">ویرایش اطلاعات</a> 
+						</div>
+					</li>
+
+
+					<li class="nav-item">
+						<div class="nav_inner_div navid_with_icon">
+							<img src="https://hamtaloans.com/inc/libs/bootstrap-icons-1.1/box-arrow-right.svg" class="navid_wico_icon"  style="width: 24px; height:24px;">
+							<a class="navid_link" href="<?php echo $logout_url;?>">خروج از حساب کاربری</a> 
+						</div>
+					</li>
+
+
+					<!-- فروش -->
+					<li class="nav-item dropdown">
+						
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="https://hamtaloans.com/inc/libs/bootstrap-icons-1.1/person-gear.svg" class="navid_wico_icon" style="width: 24px; height:24px;">
+							تارگت
+						</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-item"><a class="nav-link" href="<?php echo get_site_url();?>/my-account/?target=my">تارگت من</a></li>
+						</ul>
+					</li>
+					
+				</ul>
+			</nav>
+		</div>
+	</div>
